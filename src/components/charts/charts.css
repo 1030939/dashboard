@@ -1,0 +1,72 @@
+.chart-panel {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.chart-panel__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-h);
+  text-align: left;
+}
+
+.chart-panel__title--solo {
+  margin-bottom: 8px;
+}
+
+.chart-panel__body {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  flex: 1 1 auto;
+  min-height: 350px;
+}
+
+.chart-panel .recharts-cartesian-axis-tick-value,
+.chart-panel .recharts-legend-item-text {
+  fill: var(--text);
+  font-size: 11px;
+}
+
+.chart-panel .recharts-cartesian-axis-label,
+.chart-panel .recharts-pie-label-text {
+  fill: var(--text);
+  font-size: 11px;
+}
+
+.chart-panel .recharts-default-tooltip {
+  border-radius: 6px;
+  border: 1px solid var(--border) !important;
+  background: var(--bg) !important;
+  box-shadow: var(--shadow);
+}
+
+.chart-panel--bar-clickable .recharts-bar-rectangle {
+  cursor: pointer;
+}
+
+.chart-panel__toast {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  max-width: calc(100% - 24px);
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--text-h);
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  pointer-events: none;
+}
